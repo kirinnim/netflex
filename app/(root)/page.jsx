@@ -18,10 +18,16 @@ async function HomePage() {
 
   return (
     <main className='py-10'>
-      <MovieSection title='현재 상영중인 영화' movies={nowPlayingMovies} />
-      <MovieSection title='별점이 높은 영화' movies={popularMovies} />
-      <MovieSection title='당신이 좋아할 영화' movies={topRatedMovies} />
-      <MovieSection title='겨울에 어울리는 영화' movies={upcomingMovies} />
+      <MovieSection
+        title='현재 상영중인 영화'
+        movies={nowPlayingMoviesPromise}
+      />
+      <MovieSection title='별점이 높은 영화' movies={popularMoviesPromise} />
+      <MovieSection title='당신이 좋아할 영화' movies={topRatedMoviesPromise} />
+      <MovieSection
+        title='겨울에 어울리는 영화'
+        movies={upcomingMoviesPromise}
+      />
     </main>
   );
 }
